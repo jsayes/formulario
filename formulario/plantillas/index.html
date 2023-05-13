@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Ingrese sus datos personales</h1>
+    <form method="POST" action="{% url 'reserva' %}">
+        {% csrf_token %}
+        <label for="alias">Alias:</label>
+        <input type="text" name="alias"><br>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre"><br>
+
+        <label for="celular">Celular:</label>
+        <input type="number" name="celular"><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email"><br>
+
+        <input type="submit" value="Guardar">
+        <input type="reset" value="Limpiar">
+    </form>
+</body>
+</html>
